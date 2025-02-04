@@ -1,0 +1,46 @@
+<div class="div-container">
+    <p> Soldi : {{ cash | currency:'USD'}}</p>
+    <button class="bottone"(click)="addCash()">Aggiungi soldi</button>
+  
+  <table class="tabella">
+    <tr class="titolo">
+      <td>
+      Banconota
+      </td>
+      <td>
+      N° Banconote
+      </td>
+    </tr>
+    <tr >
+      <td>
+      {{ 5 | currency:'USD'}}
+      </td>
+      <td>
+      {{banconote[0]}}
+      </td>
+    </tr>
+    <tr>
+      <td>
+        {{ 10 | currency:'USD'}}
+        </td>
+        <td>
+        {{banconote[1]}}
+        </td>
+    </tr>
+    <tr>
+      <td>
+        {{ 20 | currency:'USD'}}
+        </td>
+        <td>
+        {{banconote[2]}}
+        </td>
+    </tr>
+    <tr>
+      <td>
+        {{ 50 | currency:'USD'}}
+        </td>
+        <td>
+        {{banconote[3]}}
+        </td>
+    </tr>
+  </table>
