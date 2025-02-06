@@ -1,28 +1,14 @@
-.tabella{
-    margin-top : 20px;
-    border: 2px solid black;
-    border-collapse: collapse;
-}
-
-.tabella td{
-    border: 1px solid black;
-    width: 110px;
-    text-align: center;
-    padding : 10px;
-}
-
-
-.titolo{
-    
-    background-image: linear-gradient(to bottom, rgb(37, 141, 232), rgb(10, 67, 117));
-    color: #f3f3f3;
+#counter{
+    font-size: 50px;
     font-weight: bold;
+    display: flex;
+    justify-content: center;
 }
 
-.bottone{
-    border: 1px solid black;
-    border-radius: 10px;
-    background-image: linear-gradient(to bottom, rgb(235, 157, 30), rgb(195, 99, 14));
-    color: #f3f3f3;
-    font-weight: bold;
+.button-div-container{
+    margin-bottom: 1rem;
+}
+
+#remove{
+    margin-left: 20px;
 }

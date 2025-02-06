@@ -1,0 +1,16 @@
+<div class="input-div-container">
+    <input [(ngModel)]="group_id" placeholder="group_id" id="group_id"/>
+    <input [(ngModel)]="artifact" placeholder="artifact" id="artifact" />
+    <button (click)="onClickHandler()">Cerca</button>
+</div>
+
+
+<div *ngFor="let version of rispostaDocs" class="response-div-container">
+    <div>
+        <p>{{version.id}}</p>
+        <p>{{version.g}}</p>
+        <p>{{version.a}}</p>
+        <p>{{version.v}}</p>
+    </div>
+
+</div>

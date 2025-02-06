@@ -21,6 +21,15 @@ export class ClickTycoonComponent {
     this.cash += this.cashPerClick;
     this.contaBanconote();
   }
+
+  removeCash(){
+    if (this.cash >= this.cashPerClick) {
+      this.cash -= this.cashPerClick;
+      this.contaBanconote();
+    } else {
+      alert('Il saldo non può essere negativo!');
+    }
+  }
   
   contaBanconote(){
     this.banconote = [0,0,0,0];
