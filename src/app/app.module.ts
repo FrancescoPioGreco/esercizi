@@ -7,10 +7,11 @@ import { HomeComponent } from './componenti/home/home.component';
 import { NavbarComponent } from './componenti/navbar/navbar.component';
 import { ClickTycoonComponent } from './componenti/click-tycoon/click-tycoon.component';
 import { MavenApiRestComponent } from './componenti/maven-api-rest/maven-api-rest.component';
-import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient } from '@angular/common/http'; 
 import { FetchMavenApiService } from './servizi/fetch-maven-api.service';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     CommonModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule
   ],
   providers: [provideHttpClient(), FetchMavenApiService],
   bootstrap: [AppComponent]

@@ -14,6 +14,12 @@ export class MavenApiRestComponent implements OnInit{
   }
   title='maven-api-rest';
 
+  data: any;
+  page: number = 1;
+  count: number = 0;
+  tableSize: number = 10;
+  tbaleSize: any = [5, 10, 15, 20]
+
   constructor(private fetchApi:FetchMavenApiService){ }
 
   rispostaDocs: Documents[] = [];
@@ -25,12 +31,31 @@ export class MavenApiRestComponent implements OnInit{
     this.fetchMavenApi();
   }
 
+  // fetchMavenApi():void{
+  //   this.fetchApi.getApiResponse(this.group_id,this.artifact).subscribe(
+  //     (data)=>{
+  //       this.rispostaDocs = data;
+  //     }
+  //   )
+  // }
+
   fetchMavenApi():void{
     this.fetchApi.getApiResponse(this.group_id,this.artifact).subscribe(
       (data)=>{
         this.rispostaDocs = data;
       }
     )
+  }
+
+  onTableDataChange(event: any) {
+    this.page = event;
+    this.fetchMavenApi();
+  }
+
+  onTableSizeChange(event: any): void {
+    this.tableSize = event.target.value;
+    this.page = 1;
+    this.fetchMavenApi();
   }
 
 
