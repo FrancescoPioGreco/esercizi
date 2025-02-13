@@ -1,9 +1,0 @@
-.input-div-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-}
-
-.input-div-container input,button{
-    padding: 20px;
-}

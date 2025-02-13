@@ -8,14 +8,12 @@ import { map, Observable } from 'rxjs';
 export class FetchMavenApiService {
 
   constructor(private httpClient: HttpClient) { }
-
-  urlToFetch:string = 'https://search.maven.org/solrsearch/select?q=g:';
-
+  
+  urlToFetch:string = 'http://localhost:4200/api/solrsearch/select?q=g:';
   getApiResponse(
     group_id:string,
     artifact:string
   ): Observable<Documents[]>{
-
     return this.httpClient.get<Root>(this.urlToFetch + group_id + '+AND+a:' + artifact + '&core=gav&rows=20&wt=json').pipe(
       map(
         response=>

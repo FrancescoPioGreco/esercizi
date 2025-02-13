@@ -2,12 +2,23 @@
 
 <p id="welcome">Benvenuto, sei nella home</p>
 
-<div class="card" style="width: 15rem;">
-    <div class="card-body">
-      <h5 class="card-title">ClickTycoon</h5>
-      <p class="card-text">Esercizio del ClickTycoon</p>
-      <a [routerLink]="['/click-tycoon']" class="btn btn-outline-dark">Apri</a>
+<div class="row">
+  <div class="col-sm-6 mb-3 mb-sm-0">
+    <div class="card" style="width: 15rem;">
+      <div class="card-body">
+        <h5 class="card-title">ClickTycoon</h5>
+        <p class="card-text">Esercizio del ClickTycoon</p>
+        <a [routerLink]="['/click-tycoon']" class="btn btn-outline-dark">Apri</a>
+      </div>
     </div>
   </div>
-
+  <div class="col-sm-6">
+    <div class="card" style="width: 15rem;">
+      <div class="card-body">
+        <h5 class="card-title">Maven API</h5>
+        <p class="card-text">Esercizio Maven API</p>
+        <a [routerLink]="['/maven-api-rest']" class="btn btn-outline-dark">Apri</a>
+      </div>
+    </div>
+  </div>
 </div>

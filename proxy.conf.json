@@ -1,0 +1,10 @@
+{
+"/api": {
+  "target": "https://search.maven.org/",
+  "changeOrigin": true,
+  "pathRewrite": {
+      "^/api": ""
+  },
+  "logLevel": "debug"
+}
+}
